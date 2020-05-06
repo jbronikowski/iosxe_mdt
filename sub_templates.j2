@@ -24,7 +24,7 @@ telemetry ietf subscription {{sub.seq_num}}
   <mdt-config-data xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-mdt-cfg">
     {% for sub in subs -%}
     <mdt-subscription>
-      <subscription-id>501</subscription-id>
+      <subscription-id>{{sub.seq_num}}</subscription-id>
       <base>
         {% if 'periodic' in sub.sub_type -%}
         <stream>yang-push</stream>
